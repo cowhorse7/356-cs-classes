@@ -1,42 +1,234 @@
+:root {
+  --byu-blue: #0b3b72;
+  --muted: #6b7280;
+  --card: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* page-root element should always stretch edge‑to‑edge */
+.page-root {
+  width: 100%;
+}
+body,
+html,
 #root {
-  max-width: 1280px;
+  background-color: white;
+  color: black;
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial;
+}
+.container {
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+/* BYU-like header */
+.byu-header {
+  background: var(--byu-blue);
+  color: white;
+  padding: 10px 0;
+}
+.byu-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px;
+}
+.byu-inner .logo {
+  font-weight: 700;
+}
+.byu-inner .top-links a {
+  color: rgba(255, 255, 255, 0.85);
+  margin-left: 12px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Hero / image area */
+.hero {
+  padding: 20px 0;
+}
+.hero-title {
   text-align: center;
+  margin: 6px 0;
+  font-size: 24px;
+}
+.image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.image-and-button {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+.flow-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.image-button-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+.toggle-btn {
+  background: var(--byu-blue);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+  margin: 16px 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Search row */
+.search-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.searchbar {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.searchbar input {
+  background-color: white;
+  color: rgb(36, 36, 36);
+  border: 0;
+  padding: 10px 12px;
+  min-width: 400px;
+}
+.search-btn {
+  border-left: 1px solid #eee;
+  padding: 10px 12px;
+  background: var(--byu-blue);
+  border: 0;
+  cursor: pointer;
+}
+.semester-select {
+  background-color: white;
+  color: rgb(36, 36, 36);
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Layout */
+.content {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+.left-col {
+  flex: 1 1 280px;
+  max-width: 300px;
+}
+.right-col {
+  flex: 3 1 700px;
+}
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.course-card {
+  background: var(--card);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  cursor: pointer;
+}
+.course-card.selected {
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+  border-color: #ddd;
+}
+.course-code {
+  font-weight: 700;
+}
+.course-title {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.course-detail {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.course-detail h3 {
+  margin: 0 0 8px;
+}
+.desc {
+  color: #111827;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+@media (min-width: 880px) {
+  .meta-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.sections-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.sections-table th,
+.sections-table td {
+  border: 1px solid #eee;
+  padding: 8px;
+  text-align: left;
+  font-size: 13px;
+}
+.sections-table th {
+  background: #fafafa;
+}
+
+.no-results,
+.no-sections {
+  color: var(--muted);
+  padding: 12px;
+}
+
+/* small screens */
+@media (max-width: 760px) {
+  .content {
+    flex-direction: column;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .left-col {
+    max-width: none;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
