@@ -1,5 +1,4 @@
 // src/components/CourseDetail.tsx
-import React from "react";
 import type { Course, Section } from "../App";
 
 interface CourseDetailProps {

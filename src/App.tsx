@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Header from "./components/Header";
 import ImageToggle from "./components/ImageToggle";
 import SearchBar from "./components/SearchBar";
@@ -154,9 +154,7 @@ export default function App() {
       // look inside every section field
       if (
         c.sections.some((s) =>
-          Object.values(s).some((v) =>
-            String(v).toLowerCase().includes(q),
-          ),
+          Object.values(s).some((v) => String(v).toLowerCase().includes(q)),
         )
       ) {
         return true;
