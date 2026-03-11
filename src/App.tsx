@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import Header from "./components/Header";
-import ImageToggle from "./components/ImageToggle";
 import SearchBar from "./components/SearchBar";
 import CourseList from "./components/CourseList";
 import CourseDetail from "./components/CourseDetail";
@@ -164,7 +163,8 @@ export default function App() {
   );
   const [semester, setSemester] = useState<string>("Spring 2026");
   const [query, setQuery] = useState<string>("");
-  const [imageIndex, setImageIndex] = useState<number>(0);
+  const [isMajorCollapsed, setIsMajorCollapsed] = useState<boolean>(false);
+  const [isEmphasisCollapsed, setIsEmphasisCollapsed] = useState<boolean>(false);
 
   const filteredCourses = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -211,14 +211,37 @@ export default function App() {
       <Header />
 
       <div className="hero">
-        <h2 className="hero-title">CS Major Flowchart</h2>
+        <h2 className="hero-title">
+          CS Major Flowchart
+          <button
+            onClick={() => setIsMajorCollapsed(!isMajorCollapsed)}
+            className="collapse-button"
+          >
+            {isMajorCollapsed ? '▼' : '▲'}
+          </button>
+        </h2>
 
-        <ImageToggle
-          title="CS Major Flowchart"
-          imagePaths={["/flow1.png", "/flow2.png"]} // put your two images in public/ named flow1.png, flow2.png or change paths
-          index={imageIndex}
-          onToggle={() => setImageIndex((i) => 1 - i)}
-        />
+        {!isMajorCollapsed && (
+          <div className="image-block">
+            <img src="/flow1.png" alt="CS Major Flowchart" className="flow-image" />
+          </div>
+        )}
+
+        <h2 className="hero-title">
+          Emphasis Flowchart
+          <button
+            onClick={() => setIsEmphasisCollapsed(!isEmphasisCollapsed)}
+            className="collapse-button"
+          >
+            {isEmphasisCollapsed ? '▼' : '▲'}
+          </button>
+        </h2>
+
+        {!isEmphasisCollapsed && (
+          <div className="image-block">
+            <img src="/flow2.png" alt="Emphasis Flowchart" className="flow-image" />
+          </div>
+        )}
 
         <hr className="divider" />
 

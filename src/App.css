@@ -61,6 +61,17 @@ html,
   text-align: center;
   margin: 6px 0;
   font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.collapse-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--byu-blue);
 }
 .image-block {
   display: flex;
@@ -73,12 +84,13 @@ html,
 }
 .image-and-button {
   width: 100%;
-  max-width: 900px;
+  max-width: 66.67vw;
   display: flex;
   flex-direction: column;
 }
 .flow-image {
   width: 100%;
+  max-width: 66.67vw;
   height: auto;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.06);
