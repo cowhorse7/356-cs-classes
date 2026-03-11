@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import CourseList from "./components/CourseList";
 import CourseDetail from "./components/CourseDetail";
 import "./App.css";
+import Footer from "./components/Footer";
 
 export interface Section {
   section: string;
@@ -132,7 +133,8 @@ const SAMPLE_COURSES = [
   {
     code: "CS 235",
     title: "Data Structures",
-    description: "Fundamental data structures and algorithms of computer science; basic algorithm analysis; recursion; sorting and searching; lists, stacks, queues, trees, hashing; object-oriented data abstraction.",
+    description:
+      "Fundamental data structures and algorithms of computer science; basic algorithm analysis; recursion; sorting and searching; lists, stacks, queues, trees, hashing; object-oriented data abstraction.",
     hours: "3 credit hours",
     prerequisites: "CS 111",
     whenTaught: "Fall, Winter, Spring, Summer",
@@ -155,7 +157,8 @@ const SAMPLE_COURSES = [
   {
     code: "CS 240",
     title: "Advanced Software Construction",
-    description: "Advanced software development with an object-oriented focus. Design, implementation, and testing of medium-sized programs including a server program.",
+    description:
+      "Advanced software development with an object-oriented focus. Design, implementation, and testing of medium-sized programs including a server program.",
     hours: "4 credit hours, 3 class hours a week, and 1 lab hour",
     prerequisites: "CS 235",
     whenTaught: "Fall, Winter, Spring, Summer",
@@ -240,13 +243,17 @@ export default function App() {
             onClick={() => setIsMajorCollapsed(!isMajorCollapsed)}
             className="collapse-button"
           >
-            {isMajorCollapsed ? '▼' : '▲'}
+            {isMajorCollapsed ? "▼" : "▲"}
           </button>
         </h2>
 
         {!isMajorCollapsed && (
           <div className="image-block">
-            <img src="/flow1.png" alt="CS Major Flowchart" className="flow-image" />
+            <img
+              src="/flow1.png"
+              alt="CS Major Flowchart"
+              className="flow-image"
+            />
           </div>
         )}
 
@@ -256,13 +263,17 @@ export default function App() {
             onClick={() => setIsEmphasisCollapsed(!isEmphasisCollapsed)}
             className="collapse-button"
           >
-            {isEmphasisCollapsed ? '▼' : '▲'}
+            {isEmphasisCollapsed ? "▼" : "▲"}
           </button>
         </h2>
 
         {!isEmphasisCollapsed && (
           <div className="image-block">
-            <img src="/flow2.png" alt="Emphasis Flowchart" className="flow-image" />
+            <img
+              src="/flow2.png"
+              alt="Emphasis Flowchart"
+              className="flow-image"
+            />
           </div>
         )}
 
@@ -304,6 +315,7 @@ export default function App() {
           <CourseDetail course={selectedCourse} semester={semester} />
         </section>
       </div>
+      <Footer />
     </div>
   );
 }

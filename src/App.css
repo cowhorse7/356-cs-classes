@@ -32,7 +32,8 @@ html,
 }
 
 /* BYU-like header */
-.byu-header {
+.byu-header,
+.footer {
   background: var(--byu-blue);
   color: white;
   padding: 10px 0;
