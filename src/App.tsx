@@ -163,8 +163,8 @@ export default function App() {
   );
   const [semester, setSemester] = useState<string>("Spring 2026");
   const [query, setQuery] = useState<string>("");
-  const [isMajorCollapsed, setIsMajorCollapsed] = useState<boolean>(false);
-  const [isEmphasisCollapsed, setIsEmphasisCollapsed] = useState<boolean>(false);
+  const [isMajorCollapsed, setIsMajorCollapsed] = useState<boolean>(true);
+  const [isEmphasisCollapsed, setIsEmphasisCollapsed] = useState<boolean>(true);
 
   const filteredCourses = useMemo(() => {
     const q = query.trim().toLowerCase();
