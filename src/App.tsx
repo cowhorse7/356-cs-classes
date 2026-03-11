@@ -107,13 +107,51 @@ const SAMPLE_COURSES = [
     ],
   },
   {
+    code: "CS 224",
+    title: "Introduction to Computer Systems",
+    description:
+      "How a computer works to execute sequential code: low level data representation and abstraction, the relationship between C and assembly, computer architecture and pipelining, the memory hierarchy, dynamic memory allocation, and linking.",
+    hours: "3 (lecture) credit hours, 3 class hours a week, and 2 lab hours",
+    prerequisites: "CS 235 or instructor's consent",
+    whenTaught: "Fall, Winter, Spring, Summer",
+    sections: [
+      {
+        section: "001",
+        timeOfDay: "Day",
+        type: "Classroom",
+        instructor: "Dylan Barton",
+        credits: 3,
+        days: "MTTh",
+        time: "4 PM - 5:50 PM",
+        location: "JKB 2104",
+        available: 24,
+        waitlist: 0,
+        semester: "Spring 2026",
+      },
+    ],
+  },
+  {
     code: "CS 235",
     title: "Data Structures",
-    description: "Data Structures advanced course.",
+    description: "Fundamental data structures and algorithms of computer science; basic algorithm analysis; recursion; sorting and searching; lists, stacks, queues, trees, hashing; object-oriented data abstraction.",
     hours: "4 credit hours",
     prerequisites: "CS 111",
     whenTaught: "Fall, Spring",
-    sections: [],
+    sections: [
+      {
+        section: "001",
+        timeOfDay: "Day",
+        type: "Classroom",
+        instructor: "Tom Stephens",
+        credits: 3,
+        days: "MTWTh",
+        time: "12:30 PM - 1:45 PM",
+        location: "TMCB 1170",
+        available: 56,
+        waitlist: 0,
+        semester: "Spring 2026",
+      },
+    ],
   },
 ];
 
