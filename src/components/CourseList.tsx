@@ -22,6 +22,7 @@ export default function CourseList({ courses, onSelect, selected }: Props) {
         >
           <div className="course-code">{c.code}</div>
           <div className="course-title">{c.title}</div>
+          <div className="course-extra-text">{"Required: " + c.prerequisites}</div>
         </div>
       ))}
     </div>

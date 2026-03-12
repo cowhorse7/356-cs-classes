@@ -88,7 +88,7 @@ const SAMPLE_COURSES = [
     description:
       "Intro course description here. Prior programming experience should include statements, variables, control flow (if/while), and functions.",
     hours: "3 credit hours",
-    prerequisites: "CS 110 or equivalent",
+    prerequisites: "CS 110",
     whenTaught: "Fall, Winter, Spring, Summer",
     sections: [
       {
@@ -112,7 +112,7 @@ const SAMPLE_COURSES = [
     description:
       "How a computer works to execute sequential code: low level data representation and abstraction, the relationship between C and assembly, computer architecture and pipelining, the memory hierarchy, dynamic memory allocation, and linking.",
     hours: "3 (lecture) credit hours, 3 class hours a week, and 2 lab hours",
-    prerequisites: "CS 235 or instructor's consent",
+    prerequisites: "CS 235",
     whenTaught: "Fall, Winter, Spring, Summer",
     sections: [
       {
