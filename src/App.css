@@ -10,6 +10,8 @@
 /* page-root element should always stretch edge‑to‑edge */
 .page-root {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 body,
 html,
@@ -56,9 +58,13 @@ html,
 .footer {
   display: flex;
   justify-content: center;
-  a {
-    color: rgba(255, 255, 255, 0.85);
-  }
+  background: var(--byu-blue);
+  color: white;
+  padding: 10px 0;
+}
+.footer a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
 }
 
 /* Hero / image area */
