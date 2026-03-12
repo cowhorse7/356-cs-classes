@@ -193,7 +193,7 @@ html,
   border: 1px solid #eee;
   cursor: pointer;
 }
-.course-extra-text {
+.course-prerequisites {
   position: absolute;
   top: 5px;
   right: 10px;
@@ -271,5 +271,11 @@ html,
   }
   .left-col {
     max-width: none;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 761px) {
+  .course-prerequisites {
+    display: none; /* Hide prerequisites on narrow screens */
   }
 }
