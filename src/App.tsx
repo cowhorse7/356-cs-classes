@@ -249,6 +249,11 @@ export default function App() {
 
         {!isMajorCollapsed && (
           <div className="image-block">
+            <p className="flow-description">
+              A degree in computer science has a core that includes courses in
+              programming, data structures, algorithms, computer systems,
+              software design, calculus, and discrete mathematics.
+            </p>
             <img
               src="/flow1.png"
               alt="CS Major Flowchart"
@@ -269,6 +274,11 @@ export default function App() {
 
         {!isEmphasisCollapsed && (
           <div className="image-block">
+            <p className="flow-description">
+              Students can build on this foundation by taking electives in a
+              variety of areas of computing. The electives in the degree are
+              grouped into a variety of areas, as shown below:
+            </p>
             <img
               src="/flow2.png"
               alt="Emphasis Flowchart"
