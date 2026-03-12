@@ -179,11 +179,21 @@ html,
   gap: 8px;
 }
 .course-card {
+  position: relative;
   background: var(--card);
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #eee;
   cursor: pointer;
+}
+.course-extra-text {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #000;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
 }
 .course-card.selected {
   box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
