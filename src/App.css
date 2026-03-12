@@ -214,10 +214,14 @@ html,
   }
 }
 
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
 .sections-table {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 8px;
+  min-width: 700px;
 }
 .sections-table th,
 .sections-table td {

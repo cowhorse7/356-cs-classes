@@ -12,7 +12,8 @@ function SectionTable({ sections }: { sections: Section[] }) {
   }
 
   return (
-    <table className="sections-table">
+    <div className="table-wrapper">
+      <table className="sections-table">
       <thead>
         <tr>
           <th>Section</th>
@@ -44,6 +45,8 @@ function SectionTable({ sections }: { sections: Section[] }) {
         ))}
       </tbody>
     </table>
+    </div>
+    
   );
 }
 
