@@ -72,7 +72,7 @@ export default function CourseDetail({ course, semester }: CourseDetailProps) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Open in BYU MyMap
+        Open in BYU MyMAP
       </a>
       <p className="desc">{course.description}</p>
 
