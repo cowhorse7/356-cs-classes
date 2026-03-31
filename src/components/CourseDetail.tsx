@@ -6,6 +6,8 @@ interface CourseDetailProps {
   semester: string;
 }
 
+const MYMAP_URL = "https://commtech.byu.edu/auth/mymap/";
+
 function SectionTable({ sections }: { sections: Section[] }) {
   if (!sections || sections.length === 0) {
     return <div className="no-sections">No sections for selected semester</div>;
@@ -64,6 +66,14 @@ export default function CourseDetail({ course, semester }: CourseDetailProps) {
       <h3>
         {course.code} — {course.title}
       </h3>
+      <a
+        className="course-link"
+        href={MYMAP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open in BYU MyMap
+      </a>
       <p className="desc">{course.description}</p>
 
       <div className="meta-grid">
