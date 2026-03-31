@@ -238,7 +238,7 @@ export default function App() {
 
       <div className="hero">
         <h2 className="hero-title">
-          CS Major Flowchart
+          Flowcharts
           <button
             onClick={() => setIsMajorCollapsed(!isMajorCollapsed)}
             className="collapse-button"
@@ -249,41 +249,30 @@ export default function App() {
 
         {!isMajorCollapsed && (
           <div className="image-block">
-            <p className="flow-description">
-              A degree in computer science has a core that includes courses in
-              programming, data structures, algorithms, computer systems,
-              software design, calculus, and discrete mathematics.
-            </p>
-            <img
-              src="/flow1.png"
-              alt="CS Major Flowchart"
-              className="flow-image"
-            />
-          </div>
-        )}
-
-        <h2 className="hero-title">
-          Emphasis Flowchart
-          <button
-            onClick={() => setIsEmphasisCollapsed(!isEmphasisCollapsed)}
-            className="collapse-button"
-          >
-            {isEmphasisCollapsed ? "▼" : "▲"}
-          </button>
-        </h2>
-
-        {!isEmphasisCollapsed && (
-          <div className="image-block">
-            <p className="flow-description">
-              Students can build on this foundation by taking electives in a
-              variety of areas of computing. The electives in the degree are
-              grouped into a variety of areas, as shown below:
-            </p>
-            <img
-              src="/flow2.png"
-              alt="Emphasis Flowchart"
-              className="flow-image"
-            />
+            <div className="flow-item">
+              <p className="flow-description">
+                A degree in computer science has a core that includes courses in
+                programming, data structures, algorithms, computer systems,
+                software design, calculus, and discrete mathematics.
+              </p>
+              <img
+                src="/flow1.png"
+                alt="CS Major Flowchart"
+                className="flow-image"
+              />
+            </div>
+            <div className="flow-item">
+              <p className="flow-description">
+                Students can build on this foundation by taking electives in a
+                variety of areas of computing. The electives in the degree are
+                grouped into a variety of areas, as shown below:
+              </p>
+              <img
+                src="/flow2.png"
+                alt="Emphasis Flowchart"
+                className="flow-image"
+              />
+            </div>
           </div>
         )}
 
