@@ -72,6 +72,20 @@ html,
 .hero {
   padding: 20px 0;
 }
+.page-title {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: var(--byu-blue);
+}
+.page-description {
+  text-align: center;
+  margin: 0 auto 12px;
+  max-width: 760px;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.5;
+}
 .hero-title {
   text-align: center;
   margin: 6px 0;
