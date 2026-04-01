@@ -240,6 +240,12 @@ html,
 .course-detail h3 {
   margin: 0 0 8px;
 }
+.time {
+  background-color: rgb(156, 247, 232);
+}
+.place {
+  background-color: rgb(170, 214, 247);
+}
 .desc {
   color: #111827;
 }

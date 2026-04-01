@@ -16,39 +16,38 @@ function SectionTable({ sections }: { sections: Section[] }) {
   return (
     <div className="table-wrapper">
       <table className="sections-table">
-      <thead>
-        <tr>
-          <th>Section</th>
-          <th>Time of Day</th>
-          <th>Instruction</th>
-          <th>Instructor</th>
-          <th>Credits</th>
-          <th>Days</th>
-          <th>Time</th>
-          <th>Location</th>
-          <th>Available</th>
-          <th>Waitlist</th>
-        </tr>
-      </thead>
-      <tbody>
-        {sections.map((s) => (
-          <tr key={s.section}>
-            <td>{s.section}</td>
-            <td>{s.timeOfDay}</td>
-            <td>{s.type}</td>
-            <td>{s.instructor}</td>
-            <td>{s.credits}</td>
-            <td>{s.days}</td>
-            <td>{s.time}</td>
-            <td>{s.location}</td>
-            <td>{s.available}</td>
-            <td>{s.waitlist}</td>
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Time of Day</th>
+            <th>Instruction</th>
+            <th>Instructor</th>
+            <th>Credits</th>
+            <th>Days</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th>Available</th>
+            <th>Waitlist</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {sections.map((s) => (
+            <tr key={s.section}>
+              <td>{s.section}</td>
+              <td className="time">{s.timeOfDay}</td>
+              <td className="place">{s.type}</td>
+              <td>{s.instructor}</td>
+              <td>{s.credits}</td>
+              <td className="time">{s.days}</td>
+              <td className="time">{s.time}</td>
+              <td className="place">{s.location}</td>
+              <td>{s.available}</td>
+              <td>{s.waitlist}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-    
   );
 }
 
