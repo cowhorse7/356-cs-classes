@@ -236,7 +236,7 @@ export default function App() {
       <Header />
 
       <div className="hero">
-        <h1 className="page-title">Browse CS Courses</h1>
+        <h1 className="page-title">Browse Computer Science Courses</h1>
         <p className="page-description">
           Explore computer science courses, compare sections by semester, and
           view prerequisites and scheduling details in one place.
