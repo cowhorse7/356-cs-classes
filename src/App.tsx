@@ -190,7 +190,6 @@ export default function App() {
   const [semester, setSemester] = useState<string>("Spring 2026");
   const [query, setQuery] = useState<string>("");
   const [isMajorCollapsed, setIsMajorCollapsed] = useState<boolean>(true);
-  const [isEmphasisCollapsed, setIsEmphasisCollapsed] = useState<boolean>(true);
 
   const filteredCourses = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -250,6 +249,7 @@ export default function App() {
         {!isMajorCollapsed && (
           <div className="image-block">
             <div className="flow-item">
+              <div>CS Core Flowchart</div>
               <p className="flow-description">
                 A degree in computer science has a core that includes courses in
                 programming, data structures, algorithms, computer systems,
@@ -262,6 +262,7 @@ export default function App() {
               />
             </div>
             <div className="flow-item">
+              <div>CS Emphasis Flowchart</div>
               <p className="flow-description">
                 Students can build on this foundation by taking electives in a
                 variety of areas of computing. The electives in the degree are
