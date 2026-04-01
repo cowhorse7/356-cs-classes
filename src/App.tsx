@@ -189,7 +189,7 @@ export default function App() {
   );
   const [semester, setSemester] = useState<string>("Spring 2026");
   const [query, setQuery] = useState<string>("");
-  const [isMajorCollapsed, setIsMajorCollapsed] = useState<boolean>(true);
+  const [isChartCollapsed, setisChartCollapsed] = useState<boolean>(true);
 
   const filteredCourses = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -237,16 +237,16 @@ export default function App() {
 
       <div className="hero">
         <h2 className="hero-title">
-          Flowcharts
+          CS Course Flowcharts
           <button
-            onClick={() => setIsMajorCollapsed(!isMajorCollapsed)}
+            onClick={() => setisChartCollapsed(!isChartCollapsed)}
             className="collapse-button"
           >
-            {isMajorCollapsed ? "▼" : "▲"}
+            {isChartCollapsed ? "▼" : "▲"}
           </button>
         </h2>
 
-        {!isMajorCollapsed && (
+        {!isChartCollapsed && (
           <div className="image-block">
             <div className="flow-item">
               <div>CS Core Flowchart</div>
